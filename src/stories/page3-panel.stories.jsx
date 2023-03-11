@@ -18,7 +18,7 @@ export default {
   },
   decorators:[
     (Story)=>
-        <div className="w-[800px]"><Story/></div>
+        <div className="w-full sm:w-[800px]"><Story/></div>
   ]
 };
 

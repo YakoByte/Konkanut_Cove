@@ -17,7 +17,7 @@ export default {
   },
   decorators:[
     (Story)=>
-        <div className="sm:p-12 sm:py-36 mt-20 m-[500px]"><Story/></div>
+        <div className="sm:p-12 sm:py-36 sm:w-[800px]"><Story/></div>
   ]
 };
 

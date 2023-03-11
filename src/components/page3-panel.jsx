@@ -11,12 +11,12 @@ export default function Page3Panel({title,includedList,title2,desc}){
                     border-b-[30px] border-b-transparent">
                 </div>
             </div>
-            <div className="flex items-center px-8 flex-wrap">
-                <div className="text-gray-500 text-lg mx-2 max-sm:my-2">Included:</div>
+            <div className="flex sm:items-center px-8 max-sm:flex-col">
+                <div className="text-gray-500 text-xl sm:text-lg mx-2 max-sm:my-2">Included:</div>
                 {includedList.map(({title,Icon},index)=>
-                    <div className="flex justify-center items-center max-sm:my-2" key={index}>
-                        <Icon  theme="filled" size="24" fill="black"/>
-                        <div className="text-green-800 text-lg mx-3 ">{title}</div>
+                    <div className="flex sm:justify-center items-center max-sm:my-2" key={index}>
+                        <Icon  theme="filled" size="36" fill="black"/>
+                        <div className="text-green-800 text-xl sm:text-lg mx-3 ">{title}</div>
                     </div>
                 )}
             </div>

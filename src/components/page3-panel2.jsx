@@ -7,12 +7,12 @@ export default function Page3Panel2({image,imageWidth=150,imageHeight=100,title,
   const fromDateFmt = moment(fromDate).format("MMM Do YY");
   const toDateFmt = moment(toDate).format("MMM Do YY");
   return (
-    <div className="flex items-center bg-white border-[1px] shadow-xl border-gray-200 px-5 py-3 rounded-md">
-            <Image src={image} width={""+imageWidth} height={""+imageHeight} className="rounded-md"/>
-        <div className="flex flex-col ml-3">
+    <div className="flex max-sm:flex-col items-start bg-white border-[1px] shadow-xl border-gray-200 px-5 py-3 rounded-md max-sm:w-fit">
+            <Image src={image} alt="picture" width={""+imageWidth} height={""+imageHeight} className="rounded-md"/>
+        <div className="flex flex-col ml-3 mt-3">
             <div className="text-lg">{title}</div>
-            <div className="text-sm text-gray-200">{location}</div>
-            <div className="text-sm text-gray-200 mb-3">{distance} from {fromLocation}</div>
+            <div className="text-sm text-gray-300">{location}</div>
+            <div className="text-sm text-gray-300 mb-3">{distance} from {fromLocation}</div>
             <div className="flex items-center mb-3">
                 <Calendar/>
                 <span className="text-sm mx-2 border-box">{fromDateFmt}</span>
@@ -20,8 +20,8 @@ export default function Page3Panel2({image,imageWidth=150,imageHeight=100,title,
                 <span className="text-sm mx-2 border-box">{toDateFmt}</span>
             </div>
             {includes && <div className="flex flex-col">
-                <div className="text-sm text-gray-200">Includes:{includes.map((include)=>include+" ")}</div>
-                <div className="text-sm text-gray-200 mb-3">Room type:{room_type}</div>
+                <div className="text-sm text-gray-300">Includes: <span className="text-sm text-gray-700">{includes.map((include)=>include+" ")}</span></div>
+                <div className="text-sm text-gray-300 mb-3">Room type: <span className="text-sm text-gray-700">{room_type}</span></div>
             </div>}           
 
         </div>

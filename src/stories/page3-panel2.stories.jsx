@@ -19,7 +19,7 @@ export default {
   },
   decorators:[
     (Story)=>
-      <div className='w-[500px]'>
+      <div className='w-full sm:w-[1000px]'>
         <div className='p-5'><Story/></div>
       </div>
   ]
@@ -37,5 +37,6 @@ Default.args = {
   fromDate: new Date('2023-04-01'),
   toDate: new Date('2023-04-08'),
   includes: ['Free breakfast', 'Spa access'],
-  room_type: 'Deluxe Suite'
+  room_type: 'Deluxe Suite',
+  imageWidth:240,imageHeight:160
 };

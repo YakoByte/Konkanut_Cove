@@ -25,7 +25,7 @@ const ImagePanel = ({image,width})=>{
     return(
     <>
         <div className="xs:hidden">
-            
+            <Image src={image} width={imgWidth} height={imgHeight} alt="" className="shadow-md mb-2 rounded-md"/>
         </div>
         <div className={`flex flex-col relative w-full max-xs:hidden w-[${IMG_PROP*100}%]`}>
             <div className="absolute top-1 border-2 border-green-800 text-green-800 rounded-sm text-md text-center px-2 "
@@ -37,7 +37,8 @@ const ImagePanel = ({image,width})=>{
             <ul className="absolute bottom-0 shadow-md rounded-md flex w-full">
                 {options.map((option,ind)=>{
                     const Icon = option.icon;
-                   return( <li key={ind} className="px-3 py-2 text-green-800 flex flex-col justify-center items-center grow">
+                   return( <li key={ind} className="px-3 py-2 text-green-800 flex flex-col justify-center items-center grow cursor-pointer
+                   hover:bg-gray-200">
                         <div className="text-green-800 text-xs">{option.name}</div>
                         <Icon size="24" className="stroke-current text-green-800"/>
                     </li>)
@@ -50,10 +51,10 @@ const ImagePanel = ({image,width})=>{
 
 export default  function Page2Panel({image,title,duration,desc,discounted_rate,actual_rate,percent_off,n=2,width}){
     return(
-        <div className="flex max-sm:flex-col bg-white shadow-2xl border-[2px] border-gray-100 rounded-lg px-5 py-5 max-sm:w-full" style={{width:width}}>
+        <div className="flex max-sm:justify-center max-sm:flex-col bg-white shadow-2xl border-[2px] border-gray-100 rounded-lg px-5 py-5 max-sm:w-full">
             <ImagePanel image={image} width={width}/>
             <div className="grow"></div>
-            <div className="flex flex-col text-green-800 w-[40%] pr-4 mt-2">
+            <div className="flex flex-col text-green-800 sm:w-[40%] sm:pr-4 mt-2">
                 <div className="font-bold text-xl mb-3">{title}</div>
                 <div className="font-bold text-lg mb-2">{duration}</div>
                 <div className="text-md">{desc}</div>
